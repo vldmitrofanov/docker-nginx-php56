@@ -19,13 +19,19 @@ docker-nginx-php56               latest              827d5ed02bae        24 minu
 
 
 If you want to push new image to your own docker repository, you would need to tag it first
-`# docker tag 827d5ed02bae <your user>/docker-nginx-php56`
+```
+# docker tag 827d5ed02bae <your user>/docker-nginx-php56
+```
 
 login
-`# docker login`
+```
+# docker login
+```
 
 then
-`# docker push shirker2006/docker-nginx-php56`
+```
+# docker push shirker2006/docker-nginx-php56
+```
 
 
 available image could be used this way:
@@ -33,4 +39,4 @@ available image could be used this way:
 # docker run --name <fancy-name> -d -p 8081:80 --restart always  -v /Users/spongebob/bikini-botom/httproot:/var/www/app/ shirker2006/docker-nginx-php56
 ```
 
-to connect to your localhost MySQL db use 'host.docker.internal' as IP address (at least works for mac)
+to connect to your localhost MySQL db use `'host.docker.internal'` as IP address (at least works for mac)
